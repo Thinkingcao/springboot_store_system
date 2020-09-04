@@ -47,3 +47,9 @@ http://www.layuicms.com/v2/index.html
 - “图片管理”页面新增“上传新图片”和“图片展示【即layer.photo】”功能。【由于弹层的展示获取的是接口中的数据，所以弹层不会展示新上传的图片，当然实际开发中不会有这个问题】
 ### 开源协议
 MIT License
+#### 参考
+https://github.com/YzxUpUp/LayuiCMS
+
+https://github.com/yeqifu/warehouse
+
+https://gitee.com/superbol/springboot_background_system
