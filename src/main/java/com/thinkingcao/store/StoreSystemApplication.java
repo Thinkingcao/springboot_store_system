@@ -12,4 +12,6 @@ public class StoreSystemApplication {
         SpringApplication.run(StoreSystemApplication.class, args);
     }
 
+
+
 }

@@ -1,10 +1,11 @@
 package com.thinkingcao.store.system.controller;
 
+import com.thinkingcao.store.common.utils.ResultObj;
+import com.thinkingcao.store.common.utils.WebUtils;
+import com.thinkingcao.store.system.common.ActiverUser;
 import org.apache.ibatis.annotations.Param;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,22 +13,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @desc:
+ * @desc:  登录Controller
  * @author: cao_wencao
  * @date: 2020-09-04 17:32
  */
 @Controller
+@RequestMapping("api")
 public class LoginController {
-
-    /**
-     * 跳转登录页面
-     *
-     * @return
-     */
-    @RequestMapping("/login")
-    public String login() {
-        return "login";
-    }
 
     /**
      * 登录验证
@@ -48,6 +40,21 @@ public class LoginController {
             model.addAttribute("error", "密码错误！");
         }
         return "login";
+    }
+
+    @RequestMapping("login")
+    public ResultObj login(String loginname, String pwd) {
+        Subject subject = SecurityUtils.getSubject();
+        AuthenticationToken token=new UsernamePasswordToken(loginname, pwd);
+        try {
+            subject.login(token);
+            ActiverUser activerUser=(ActiverUser) subject.getPrincipal();
+            WebUtils.getSession().setAttribute("user", activerUser.getUser());
+            return ResultObj.LOGIN_SUCCESS;
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+            return ResultObj.LOGIN_ERROR_PASS;
+        }
     }
 
 

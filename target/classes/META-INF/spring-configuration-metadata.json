@@ -1,0 +1,45 @@
+{
+  "groups": [
+    {
+      "name": "shiro",
+      "type": "com.thinkingcao.store.config.shiro.ShiroConfig",
+      "sourceType": "com.thinkingcao.store.config.shiro.ShiroConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "shiro.anon-urls",
+      "type": "java.lang.String[]",
+      "sourceType": "com.thinkingcao.store.config.shiro.ShiroConfig"
+    },
+    {
+      "name": "shiro.authc-ulrs",
+      "type": "java.lang.String[]",
+      "sourceType": "com.thinkingcao.store.config.shiro.ShiroConfig"
+    },
+    {
+      "name": "shiro.hash-algorithm-name",
+      "type": "java.lang.String",
+      "sourceType": "com.thinkingcao.store.config.shiro.ShiroConfig",
+      "defaultValue": "md5"
+    },
+    {
+      "name": "shiro.hash-iterations",
+      "type": "java.lang.Integer",
+      "sourceType": "com.thinkingcao.store.config.shiro.ShiroConfig",
+      "defaultValue": 2
+    },
+    {
+      "name": "shiro.log-out-url",
+      "type": "java.lang.String",
+      "sourceType": "com.thinkingcao.store.config.shiro.ShiroConfig"
+    },
+    {
+      "name": "shiro.login-url",
+      "type": "java.lang.String",
+      "sourceType": "com.thinkingcao.store.config.shiro.ShiroConfig",
+      "defaultValue": "\/index.html"
+    }
+  ],
+  "hints": []
+}
