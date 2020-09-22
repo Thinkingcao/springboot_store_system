@@ -12,7 +12,7 @@ import java.security.MessageDigest;
  * @author ruoyi
  */
 public class Md5Utils {
-    private static final Logger log = LoggerFactory.getLogger(com.jiuyv.common.utils.security.Md5Utils.class);
+    private static final Logger log = LoggerFactory.getLogger(Md5Utils.class);
 
     private static byte[] md5(String s) {
         MessageDigest algorithm;

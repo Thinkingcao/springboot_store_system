@@ -3,7 +3,7 @@
  */
 package com.thinkingcao.store.common.exception;
 
-import com.jiuyv.common.utils.ExceptionUtil;
+
 import org.apache.commons.lang3.Validate;
 
 import java.io.IOException;

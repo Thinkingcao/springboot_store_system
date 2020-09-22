@@ -1,5 +1,6 @@
 package com.thinkingcao.store.common.security;
 
+
 import org.apache.commons.codec.binary.Base64;
 
 import java.io.*;

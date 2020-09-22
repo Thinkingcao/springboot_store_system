@@ -1,5 +1,6 @@
 package com.thinkingcao.store.common.exception;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import java.io.PrintWriter;
