@@ -120,7 +120,6 @@
             <artifactId>pinyin4j</artifactId>
             <version>${pinyin4j.version}</version>
         </dependency>
-
     </dependencies>
 
     <build>
