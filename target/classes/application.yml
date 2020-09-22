@@ -75,3 +75,8 @@ shiro:
   log-out-url: /login/logout*
   authc-ulrs:
     - /**
+
+#log日志配置
+logging:
+  level:
+    com.thinkingcao.store: debug
